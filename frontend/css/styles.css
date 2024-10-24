@@ -1,0 +1,103 @@
+body {
+    background: linear-gradient(135deg, #6ab7ff 0%, #e63946 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem; /* Espaciado entre tarjetas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Efecto de hover */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Efecto de ampliación al pasar el ratón */
+}
+
+.card-body {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #e63946;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #d62839;
+}
+
+.btn-success {
+    background-color: #1d3557;
+}
+
+.btn-success:hover {
+    background-color: #457b9d;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+/* styles.css */
+
+/* Estilo del contenedor de las tarjetas */
+#task-list {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan en varias filas */
+    gap: 15px; /* Espaciado entre las tarjetas */
+}
+
+/* Ajustar el tamaño de cada tarjeta */
+.card {
+    flex: 1 1 calc(30% - 15px); /* Ajusta el ancho de las tarjetas a aproximadamente un 30% del ancho del contenedor */
+    max-width: 30%; /* Limitar el ancho máximo de las tarjetas */
+    border: 1px solid #ddd; /* Borde suave alrededor de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Esconder cualquier desbordamiento */
+    transition: transform 0.2s; /* Transición suave al pasar el mouse */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Ajustar el interior de cada tarjeta */
+.card-header {
+    background-color: #f7f7f7; /* Fondo claro para el encabezado */
+    font-weight: bold; /* Hacer el texto más prominente */
+}
+
+.card-body {
+    padding: 15px; /* Padding alrededor del contenido */
+}
+
+.card-text {
+    margin-bottom: 10px; /* Espaciado entre los elementos de texto */
+}
+
+/* Para pantallas más pequeñas, puedes ajustar el tamaño de las tarjetas */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(45% - 15px); /* Cambiar el ancho a un 45% en pantallas más pequeñas */
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        flex: 1 1 calc(100% - 15px); /* Cambiar el ancho a un 100% en pantallas aún más pequeñas */
+        max-width: 100%;
+    }
+}
